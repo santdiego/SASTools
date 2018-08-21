@@ -1,0 +1,7 @@
+Ejecute install.m en Matlab.
+
+NOTAS:
+No es necesario que copie los archivos Mex a las carpetas de trabajo. 
+La carpeta '\Librerias Simulink INAUT' se agregara a las rutas de busqueda de su MATLAB.
+Las librerias de Simulink se Agregaran al 'Simulink Library Browser'. 
+En caso de no visualizar refrescar el 'Library Browser' (F5)
