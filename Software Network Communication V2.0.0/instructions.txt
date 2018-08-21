@@ -1,0 +1,3 @@
+For client load the IP of the client in the section "Configuration of Ip and Ports" in the 2 dialog boxes, load different ports in the port dialogs.
+For the client, load the IP of the server in the section "Connection data with the server", with the server's input port
+For server load the IP of the server, the port of entry, and the other port (different)
