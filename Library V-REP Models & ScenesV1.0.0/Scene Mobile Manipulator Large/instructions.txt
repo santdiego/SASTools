@@ -1,0 +1,8 @@
+run "scheme.slx" and "videoOutput.slx " on different Matlab instance
+Robotic toolbox 9.10 required : http://petercorke.com/wordpress/
+Novint Falcon required.
+1- type on Matlab 	ctr=0 to automatic control allocation 
+			ctr=1 for manual control allocation
+2- With the emergent windows active press "a" to start simulation. Keep this window on top.
+3- on manual control allocation type "a" to control the base and "s" to control the manipulator. 4 – 4- Hold "+" on Novint to disable the collision avoidance. 
+5- Press “z” on Novint to stop simulation
