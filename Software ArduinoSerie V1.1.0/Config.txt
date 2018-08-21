@@ -1,0 +1,12 @@
+Muestreo
+5
+COM
+5
+BaudRate 
+614400
+Dispositivo 
+1
+Actuadores
+6
+Sensores
+12
