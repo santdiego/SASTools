@@ -1,0 +1,2 @@
+Change the port to COM3 
+Device Manager ->Ports->USB Serial Device (Laser)->Port Settings->Advanced...->COM Port Number ---> Change to COM3 ->OK->Yes->OK ->unplug device, reconect, and verify port
