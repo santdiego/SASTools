@@ -1,10 +1,10 @@
 appState	st_START
-period_us	100000
+period_us	10000
 shmControlName	RobotisManipulator_ctr
-shmInputName	RobotisManipulator_in
-shmOutputName	RobotisManipulator_out
-shmInputSize	28
-shmOutputSize	120
+shmInputName	RobotisManipulator_In
+shmOutputName	RobotisManipulator_Out
+shmInputSize	52
+shmOutputSize	336
 shmInputOffset	0
 shmOutputOffset	0
 error		0
