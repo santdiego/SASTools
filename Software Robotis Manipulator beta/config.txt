@@ -1,0 +1,17 @@
+appState	st_START
+period_us	100000
+shmControlName	RobotisManipulator_ctr
+shmInputName	RobotisManipulator_in
+shmOutputName	RobotisManipulator_out
+shmInputSize	28
+shmOutputSize	120
+shmInputOffset	0
+shmOutputOffset	0
+error		0
+nParams		0
+-P COM3
+-P CTR_POSITION
+-P BAUDRATE 3000000
+
+
+
