@@ -1,4 +1,0 @@
-1ª C:\Program Files\V-REP3\V-REP_PRO_EDU\programming
-2ª Configurar El proyecto adecuadamente, las rutas de compilacion pueden dar error, redefinirlas. Compilar siempre en release
-3ª verificar que el kit usado sea el mismo que el usado para compilar VREP
-4ª hacer clean -> run qmake ->rebuild
