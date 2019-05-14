@@ -1,0 +1,3 @@
+Para cliente cargar la IP del cliente  en la seccion "Configuracion de Ip y Puertos" en los 2 cuadros de dialogo, cargar puertos distintos en los dialogos de puertos.
+Para cliente cargar la IP del servidor en la seccion "Datos de conexion con el servidor", con el puerto de entrada del servidor
+Para servidor cargar la IP del servidor, el puerto de entrada, y el otro puerto (distinto)

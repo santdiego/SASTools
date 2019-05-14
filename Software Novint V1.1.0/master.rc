@@ -1,0 +1,221 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "Novint"
+    BEGIN
+        MENUITEM "Start",                       ID_START
+        MENUITEM "Stop",                        ID_STOP
+        MENUITEM "Estate",                      ID_ESTADO
+        MENUITEM "Configuration",               ID_SET
+        MENUITEM "Exit",                        ID_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ESTADO DIALOGEX 0, 0, 121, 138
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sensors"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Novint State",IDC_STATIC,6,3,107,128
+    LTEXT           "X Pos:",IDC_STATIC,15,22,22,8
+    LTEXT           "0",IDC_POSX,47,22,32,8
+    LTEXT           "[cm]",IDC_STATIC,85,22,14,8
+    LTEXT           "Y Pos:",IDC_STATIC,15,38,22,8
+    LTEXT           "0",IDC_POSY,47,38,32,8
+    LTEXT           "[cm]",IDC_STATIC,85,38,14,8
+    LTEXT           "Z Pos:",IDC_STATIC,15,54,22,8
+    LTEXT           "0",IDC_POSZ,47,54,32,8
+    LTEXT           "[cm]",IDC_STATIC,85,54,14,8
+    LTEXT           "X Vel:",IDC_STATIC,15,70,20,8
+    LTEXT           "0",IDC_VELX,47,70,32,8
+    LTEXT           "[cm/s]",IDC_STATIC,85,70,21,8
+    LTEXT           "Y Vel:",IDC_STATIC,15,87,20,8
+    LTEXT           "0",IDC_VELY,47,87,32,8
+    LTEXT           "[cm/s]",IDC_STATIC,85,87,21,8
+    LTEXT           "Z Vel:",IDC_STATIC,15,103,20,8
+    LTEXT           "0",IDC_VELZ,47,103,32,8
+    LTEXT           "[cm/s]",IDC_STATIC,85,103,21,8
+    LTEXT           "Buttons:",IDC_STATIC,15,119,27,8
+    LTEXT           "0",IDC_BUTTONS,47,119,54,8
+END
+
+IDD_SET DIALOGEX 0, 0, 189, 163
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Set",IDCARGAR,119,99,50,14
+    DEFPUSHBUTTON   "CANCEL",IDCANCEL1,120,132,50,14
+    GROUPBOX        "Spring [N/cm]",IDC_STATIC,7,5,84,73
+    EDITTEXT        IDC_KX,36,18,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_KY,36,38,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_KZ,36,59,40,14,ES_AUTOHSCROLL
+    LTEXT           "Kx:",IDC_STATIC,22,21,11,8
+    LTEXT           "Ky:",IDC_STATIC,22,41,11,8
+    LTEXT           "Kz:",IDC_STATIC,22,61,11,8
+    EDITTEXT        IDC_BX1,36,93,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BY1,36,111,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BZ1,36,131,40,14,ES_AUTOHSCROLL
+    LTEXT           "Bx:",IDC_STATIC,22,96,11,8
+    LTEXT           "By:",IDC_STATIC,22,114,11,8
+    LTEXT           "Bz:",IDC_STATIC,22,133,11,8
+    GROUPBOX        "Multiples Falcon one PC",IDC_STATIC,97,7,85,76
+    CONTROL         "Novint 1",IDC_NOVINT1,"Button",BS_AUTORADIOBUTTON,105,22,43,10
+    CONTROL         "Novint 2",IDC_NOVINT2,"Button",BS_AUTORADIOBUTTON,105,36,43,10
+    CONTROL         "Novint 3",IDC_NOVINT3,"Button",BS_AUTORADIOBUTTON,105,50,43,10
+    CONTROL         "Novint 4",IDC_NOVINT4,"Button",BS_AUTORADIOBUTTON,105,64,43,10
+    GROUPBOX        "Damping [N.s/cm]",IDC_STATIC,6,82,85,67
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ESTADO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 113
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_SET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Spain, International Sort) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS
+BEGIN
+    "/",            ID_EXIT,                ASCII,  ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "Novint"
+    IDS_APPTOOLTIP          "Novint"
+    IDC_SYSTRAYDEMO         "NOVINT"
+END
+
+#endif    // Spanish (Spain, International Sort) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Argentina) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESS)
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_ARGENTINA
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON2               ICON                    "NovintFalcon.ico"
+#endif    // Spanish (Argentina) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

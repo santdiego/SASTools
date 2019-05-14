@@ -1,0 +1,3 @@
+PARA QUE FUNCIONE BIEN EN OTRA MAQUINA: 
+https://stackoverflow.com/questions/18668003/the-procedure-entry-point-gxx-personality-v0-could-not-be-located
+https://www.youtube.com/watch?v=8qozxqSZQEg

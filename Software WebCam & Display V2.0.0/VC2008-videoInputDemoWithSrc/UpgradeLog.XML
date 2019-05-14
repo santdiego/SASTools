@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="videoInputBasicDemo">
+</Property><Property Name="Solution File" Value="C:\Users\Lucio Salinas\Downloads\videoInput-master\videoInputSrcAndDemos\VC2008-videoInputDemoWithSrc\videoInputBasicDemo.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Lucio Salinas\Downloads\videoInput-master\videoInputSrcAndDemos\VC2008-videoInputDemoWithSrc\videoInputBasicDemo.suo">
+</Property><Property Name="Date" Value="quarta-feira, 11 de setembro de 2013">
+</Property><Property Name="Time" Value="20:25">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="videoInputBasicDemo.sln" Description="File successfully backed up as C:\Users\Lucio Salinas\Downloads\videoInput-master\videoInputSrcAndDemos\VC2008-videoInputDemoWithSrc\videoInputBasicDemo.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="videoInputBasicDemo.suo" Description="File successfully backed up as C:\Users\Lucio Salinas\Downloads\videoInput-master\videoInputSrcAndDemos\VC2008-videoInputDemoWithSrc\videoInputBasicDemo.suo.old">
+</Event><Event ErrorLevel="0" Project="videoInputBasicDemo" Source="videoInputBasicDemo.vcproj" Description="Converting project file 'C:\Users\Lucio Salinas\Downloads\videoInput-master\videoInputSrcAndDemos\VC2008-videoInputDemoWithSrc\videoInputBasicDemo.vcproj'.">
+</Event><Event ErrorLevel="1" Project="videoInputBasicDemo" Source="videoInputBasicDemo.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="videoInputBasicDemo" Source="videoInputBasicDemo.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="videoInputBasicDemo" Source="videoInputBasicDemo.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="videoInputBasicDemo" Source="videoInputBasicDemo.vcproj" Description="Done converting to new project file 'C:\Users\Lucio Salinas\Downloads\videoInput-master\videoInputSrcAndDemos\VC2008-videoInputDemoWithSrc\videoInputBasicDemo.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="videoInputBasicDemo" Source="videoInputBasicDemo.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="videoInputBasicDemo.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="videoInputBasicDemo.sln" Description="Converted">
+</Event></UpgradeLog>

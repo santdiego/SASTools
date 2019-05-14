@@ -1,0 +1,19 @@
+Documentación recomendada para nuevas propuestas "App-bloque":
+
+Documentación para la app:
+
+1)	Autores, Fecha de modificación, e historial de cambios realizado sobre el proyecto.
+2)	Nombre y características del sistema físico
+3)	Lenguaje de programación utilizado
+4)	Herramienta de compilación utilizada
+5)	Instructivo de compilación 
+6)	Compatibilidad (sistema operativo, versión, etc.)
+7)	Drivers y dependencias (librerías externas)
+8)	Instructivo de uso. 
+
+
+Documentación para el bloque asociado a la app:
+
+1)	Archivo .slx o .mdl que contenga al bloque. Bloque Simulink. Debe estar correctamente enmascarado, incluyendo imagen, nombre del dispositivo y nombre de cada puerto (entradas y salidas).Las instrucciones para el uso del bloque, la descripción de las entradas y salidas, ubicación de la aplicación asociada y su respectiva ayuda debe realizarse en el “Help” de la máscara.  
+2)	Si el bloque utiliza un archivo .mex distinto a los provistos en la librería deben agregarse en todas sus versiones disponibles (Linux, Windows, 32 bit, 64 bit).
+

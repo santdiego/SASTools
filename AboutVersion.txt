@@ -1,0 +1,12 @@
+Versions are specified with 3 numbers separated by dots, 'xyz'
+
+>'z' corresponds to minimal changes in the software, such as bug fixes. 
+Backward compatibility with the existing version must be 100%.
+
+>'y' is used to significant changes in the software, for example addition of functionality, change graphical user interface, etc. 
+Backward compatibility with the existing version must be 100%.
+
+>'x' is used for major changes in the software. For example changes in structural functioning,Plataform expasion, change in the pattern of shared memory, changes in which can not be maintained backward compatibility, etc. 
+Although allowed, is recommended to maintain backward compatibility with the existing version of the software.
+
+With exception of changes in version of 'x', developer must ensure that all existing software for earlier versions are fully compatible with the new version.

@@ -1,0 +1,36 @@
+#!/bin/sh
+
+version=1.1.2
+prefix=PREFIX
+includedir=${prefix}/include/urg_cpp
+installlib=${prefix}/lib
+
+usage="Usage: urg_cpp-config [--version] [--cflags] [--libs]"
+
+if test $# -eq 0; then
+      echo "${usage}" 1>&2
+      exit 1
+fi
+
+while test $# -gt 0; do
+
+  case $1 in
+    --version)
+      echo "${version}"
+      ;;
+    --cflags)
+      echo -I${includedir}
+      ;;
+    --libs)
+    if test ! `echo $OS | grep Windows`; then
+      echo -n "-lrt "
+    fi
+      echo -lurg_cpp `urg_c-config --libs`
+      ;;
+    *)
+      echo "${usage}" 1>&2
+      exit 1
+      ;;
+  esac
+  shift
+done

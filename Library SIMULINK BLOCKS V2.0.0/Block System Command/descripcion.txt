@@ -1,0 +1,1 @@
+Ejecuta instrucciones en la carra de comando en cada paso de muestreo configurado.

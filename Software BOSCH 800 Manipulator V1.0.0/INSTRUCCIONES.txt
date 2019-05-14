@@ -1,0 +1,2 @@
+EJECUTE "shmBosch" en la coputadora del bosch, con privilegios de administrador. 
+Este programa vincula al bosch por medio de memoria compartida. Luego comuniquese con su programa propietario.

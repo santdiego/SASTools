@@ -1,0 +1,1 @@
+g++ -o shmBosch shmBosch.cpp bosch.cpp control.cpp posicion.cpp CshareMemory.cpp -lrt

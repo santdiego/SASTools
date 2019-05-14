@@ -1,0 +1,116 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by master.rc
+//
+#define IDOK2                           3
+#define IDR_MENU1                       101
+#define IDD_DIALOG2                     103
+#define IDD_ESTADO                      103
+#define IDD_DIALOG3                     104
+#define IDD_SET                         104
+#define IDR_ACCELERATOR1                106
+#define IDS_APP_TITLE                   107
+#define IDS_APPTOOLTIP                  108
+#define IDC_SYSTRAYDEMO                 109
+#define IDI_ICON2                       109
+#define IDC_EDIT1                       1000
+#define IDC_KVP                         1000
+#define IDC_EDIT3                       1001
+#define IDC_EDIT4                       1002
+#define IDC_EDIT5                       1003
+#define IDC_EDIT2                       1004
+#define IDC_EDIT6                       1005
+#define IDC_EDIT7                       1006
+#define IDC_CHECK1                      1006
+#define IDC_EDIT8                       1007
+#define IDC_CHECK2                      1007
+#define IDC_CHECK3                      1008
+#define IDC_PROMEDIO                    1008
+#define IDC_CHECK4                      1009
+#define IDC_PROMEDIO2                   1009
+#define IDC_EDIT9                       1010
+#define IDC_IMPEDANCIAp                 1010
+#define IDC_POSICION_X                  1010
+#define IDC_EDIT10                      1011
+#define IDC_IMPEDANCIAf                 1011
+#define IDC_BX                          1011
+#define IDC_POSICION_Y                  1011
+#define IDC_KX                          1011
+#define IDC_MEDIA                       1012
+#define IDC_MASTERSLAVE                 1012
+#define IDC_POSICION_Z                  1012
+#define IDC_DESVIACION                  1013
+#define IDC_LOCALHOST                   1013
+#define IDC_BY                          1013
+#define IDC_AUXILIAR_X                  1013
+#define IDC_KY                          1013
+#define IDC_CHECKRETARDO                1014
+#define IDC_AUXILIAR_Y                  1014
+#define IDC_PENDIENTE                   1015
+#define IDC_RAMPA                       1015
+#define IDC_AUXILIAR_Z                  1015
+#define IDC_ORDENADA                    1016
+#define IDC_REF_X                       1016
+#define IDC_AUXILIAR_X1                 1016
+#define IDC_CHECK5                      1017
+#define IDC_BZ                          1017
+#define IDC_AUXILIAR_Y1                 1017
+#define IDC_KZ                          1017
+#define IDC_REF_Y                       1018
+#define IDC_AUXILIAR_Z1                 1018
+#define IDC_REF_Z                       1019
+#define IDC_BX1                         1020
+#define IDC_CHECKMASTER                 1021
+#define IDC_CHECKCONTROL                1022
+#define IDC_BY1                         1023
+#define IDC_BZ1                         1024
+#define IDC_BX2                         1025
+#define IDC_BX3                         1026
+#define IDC_BY3                         1027
+#define IDC_BZ3                         1028
+#define IDC_CHECKMULTIPLE               1029
+#define IDC_KT                          1030
+#define IDC_KV                          1031
+#define IDC_KM                          1032
+#define IDC_MEDIAH                      1033
+#define IDC_CONTROL                     1034
+#define IDCARGAR                        1037
+#define IDCANCEL1                       1038
+#define IDC_NOVINT1                     1039
+#define IDC_NOVINT2                     1040
+#define IDC_NOVINT3                     1041
+#define IDC_NOVINT4                     1042
+#define IDC_BUTTONS                     1048
+#define IDC_POSX                        2040
+#define IDC_POSY                        2041
+#define IDC_POSZ                        2042
+#define IDC_VELX                        2043
+#define IDC_VELY                        2044
+#define IDC_VELZ                        2045
+#define ID_INICIO_CZAR                  40001
+#define ID_START                        40001
+#define ID_INICIO_STOP                  40002
+#define ID_STOP                         40002
+#define ID_CONTROL_PARAMETER            40003
+#define ID_PARAMETER                    40003
+#define ID_IPSLAVE                      40003
+#define ID_CX                           40004
+#define ID_CONTROLVARONDA               40005
+#define ID_VONDA                        40005
+#define ID_GUARDAR                      40006
+#define ID_SAVE_STOP                    40007
+#define ID_ESTADO                       40008
+#define ID_SET                          40009
+#define ID_NOVINT_EXIT                  40010
+#define ID_EXIT                         40011
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        110
+#define _APS_NEXT_COMMAND_VALUE         40014
+#define _APS_NEXT_CONTROL_VALUE         1041
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

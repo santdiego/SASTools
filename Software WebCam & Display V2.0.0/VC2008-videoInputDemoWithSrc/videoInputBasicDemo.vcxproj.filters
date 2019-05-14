@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{2110d6b9-143a-4fbb-862e-23d75e940fe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\demoAppUtils">
+      <UniqueIdentifier>{ee89e348-4637-4f71-bd34-14f16c280171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\theApp">
+      <UniqueIdentifier>{bbadeaca-3bd1-41ec-8d3f-01dd6b86565b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="videoInput">
+      <UniqueIdentifier>{aeebaf8a-e23a-4e2b-927a-0aad78c90798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs">
+      <UniqueIdentifier>{1520e251-d523-49c7-9559-4da9de0a9b2c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\glfw.h">
+      <Filter>src\demoAppUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imageTexture.h">
+      <Filter>src\demoAppUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\simpleApp.h">
+      <Filter>src\demoAppUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stdafx.h">
+      <Filter>src\demoAppUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\triangleApp.h">
+      <Filter>src\theApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\videoInput\videoInput.h">
+      <Filter>videoInput</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ShareMemory.h">
+      <Filter>src\demoAppUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VirtualDevice.h">
+      <Filter>src\demoAppUtils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\imageTexture.cpp">
+      <Filter>src\demoAppUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simpleApp.cpp">
+      <Filter>src\demoAppUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>src\demoAppUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\videoInputBasicDemo.cpp">
+      <Filter>src\demoAppUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\triangleApp.cpp">
+      <Filter>src\theApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\videoInput\videoInput.cpp">
+      <Filter>videoInput</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VirtualDevice.cpp">
+      <Filter>src\demoAppUtils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="requiredLibs\dxguid.lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\GlAux.Lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\glfw.lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\GlU32.Lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\ole32.lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\oleaut32.lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\OpenGL32.Lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\quartz.lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\strmbasd.lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\strmbase.lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\strmiids.lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="requiredLibs\uuid.lib">
+      <Filter>libs</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

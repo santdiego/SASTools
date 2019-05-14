@@ -1,0 +1,26 @@
+# The values of the following format are included in the general register:
+# variable_name=[variable_direction, size_in_bytes, Access(0 read/write; 1 read;2 write), Initial value (deg)]
+#If the field is marked as "read" (input) it can be read in a manual (readField(.)) al or acutomatic (bulkRead(.))way but not written.
+#If the field is marked as "write" (output) it can be read and written manually(writeField(.)) but not read automatically with bulkRead(.).
+#If the field is marked "read/write" it will be read and written manually and automatically.
+#This is the default format of the IParser class,
+#although it can be modified using the "delimiters" property to adapt it to the needs of each program.
+#
+#Inside config file, comments start with '#', blank spaces are ignored and the following characters are reserved: '=', '[', ']', ','
+
+
+#Mandatory data for all IApp
+REGISTER_NAME= VarienseFSE103 #main register name
+REGISTER_SIZE= 512          #main register size
+OFFSET=0
+
+APP_STATE= [0, 4, 0, 0]     #0:START; 1:STOP; 2:PAUSE; 3:CLOSE; 4:UNKNOWNERROR
+
+#Optional data for all IApp
+SAMPLE_TIME_us =[4,4,0,1000]
+APP_ID         =[8,4,0,1] #this app has id=10
+
+#Specific data of each module
+BAUDRATE       =[ 12,   4, 0, 3] #0: 9600 ,1: 57600, 2: 115200, 3:1Mbps, 4: 2Mbps, 5: 3Mbps, 6: 4Mbps, 7: 4.5Mbps, 8: 10.5Mbps
+PORT           =[16,   8, 0, COM8] #COMXX
+SENSOR_OUTPUTS =[40,   24,2,0.1 0.1 0.1 1 ]
