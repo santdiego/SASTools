@@ -108,6 +108,7 @@ void laser_func()
 	}
 	// Case where the measurement range (start/end steps) is defined
 	urg.set_scanning_parameter(urg.deg2step(-120), urg.deg2step(+120), 0);
+	//std::cout << "Urg_driver::max_data_size(): " << urg.max_data_size() << std::endl;
 	urg.start_measurement(Urg_driver::Distance, Urg_driver::Infinity_times, 0);
 	std::vector<long> data;
 	long time_stamp = 0;
@@ -123,12 +124,13 @@ void laser_func()
 
 		if (!urg.get_distance(data, &time_stamp)) {
 			std::cout << "Urg_driver::get_distance(): " << urg.what() << std::endl;
-			return;
+			break;
 		}
-		std::copy(data.begin(), data.end(), m_SharedData_Hokuyo->distance_mm);
+		std::copy(data.begin()+1, data.end(), m_SharedData_Hokuyo->distance_mm);
 		ResetEvent(EventoTimer);
 	}
-
+	urg.stop_measurement();
+	urg.close();
 	m_SharedData_Hokuyo.Release();
 	return;
 }
