@@ -1,0 +1,8 @@
+﻿  get_distance.cpp
+d:\instaladores\hokuyo urg-04lx-ug01\urg_library-1.2.4\samples\cpp\get_distance.cpp(39): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Generating code
+  5 of 353 functions ( 1.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  get_distance.vcxproj -> D:\Instaladores\Hokuyo URG-04LX-UG01\urg_library-1.2.4\vs2017\cpp\x64\Release\get_distance.exe

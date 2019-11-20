@@ -1,0 +1,7 @@
+﻿  ticks.cpp
+  Urg_driver.cpp
+d:\instaladores\hokuyo urg-04lx-ug01\urg_library-1.2.4\src\urg_driver.cpp(509): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+d:\instaladores\hokuyo urg-04lx-ug01\urg_library-1.2.4\src\urg_driver.cpp(515): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+d:\instaladores\hokuyo urg-04lx-ug01\urg_library-1.2.4\src\urg_driver.cpp(521): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  urg_cpp.vcxproj -> D:\Instaladores\Hokuyo URG-04LX-UG01\urg_library-1.2.4\vs2017\cpp\x64\Debug\urg_cpp.lib

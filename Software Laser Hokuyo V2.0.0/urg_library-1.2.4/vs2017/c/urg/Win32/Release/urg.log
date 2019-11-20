@@ -1,0 +1,9 @@
+﻿  urg_connection.c
+  urg_debug.c
+  urg_ring_buffer.c
+  urg_sensor.c
+  urg_serial.c
+  urg_serial_utils.c
+  urg_tcpclient.c
+  urg_utils.c
+  urg.vcxproj -> D:\Instaladores\Hokuyo URG-04LX-UG01\urg_library-1.2.4\vs2017\cpp\Win32\Release\urg.lib

@@ -1,0 +1,15 @@
+tiempo = 60;
+ts=0.1;
+figure;
+H1=scatter3(0,0,0);
+hold;
+H2=patch(0,0,0);
+view(2);
+axis equal;
+for i=1:tiempo/ts
+    x=hokuyo;
+    data=plotHokuyo(double(x));
+    set(H1,'XData',data(1,:),'YData',data(2,:),'ZData',data(3,:));
+    drawnow;
+    pause(ts);
+end
