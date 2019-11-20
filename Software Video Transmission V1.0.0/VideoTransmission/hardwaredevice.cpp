@@ -1,5 +1,5 @@
 #include "hardwaredevice.h"
-
+using namespace cv;
 
 HardwareDevice::HardwareDevice(QObject *parent, int PID) : QObject(parent)
 {
@@ -31,7 +31,7 @@ void HardwareDevice::update(){
 
     float resizeFactor =    configuration.resizeFactor /100;
     if(configuration.resizeTool)
-        cv::resize(imgOriginal,imgReduced,cv::Size((int)(imgOriginal.cols*resizeFactor),(int)(imgOriginal.rows*resizeFactor)),0,0,CV_INTER_LINEAR);
+        cv::resize(imgOriginal,imgReduced,cv::Size((int)(imgOriginal.cols*resizeFactor),(int)(imgOriginal.rows*resizeFactor)),0,0,INTER_LINEAR);
     else{
 
         imgOriginal.copyTo(imgReduced);

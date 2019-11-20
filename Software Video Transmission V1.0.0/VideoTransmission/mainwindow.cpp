@@ -204,7 +204,7 @@ QImage MainWindow::convertOpenCVMatToQtQImage(cv::Mat mat){
     if(mat.channels() == 1) {                   // if grayscale image
         return QImage((uchar*)mat.data, mat.cols, mat.rows, mat.step, QImage::Format_Indexed8);     // declare and return a QImage
     } else if(mat.channels() == 3) {            // if 3 channel color image
-        cv::cvtColor(mat, mat, CV_BGR2RGB);     // invert BGR to RGB
+        cv::cvtColor(mat, mat,cv::COLOR_BGR2RGB);     // invert BGR to RGB
         return QImage((uchar*)mat.data, mat.cols, mat.rows, mat.step, QImage::Format_RGB888);       // declare and return a QImage
     } else {
         qDebug() << "in convertOpenCVMatToQtQImage, image was not 1 channel or 3 channel, should never get here";

@@ -25,52 +25,14 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
-##DISTFILES +=
 
-win32 {
-    message("Using win32 configuration")
-INCLUDEPATH += C:\opencvMingw\install\include
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../../../opencv/build/x64/vc15/lib/ -lopencv_world410
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../../../opencv/build/x64/vc15/lib/ -lopencv_world410d
 
-LIBS += -LC:\opencvMingw\install\x86\mingw\bin \
-#    -lopencv_calib3d320\
-    -lopencv_core320\
-#    -lopencv_features2d320\
-#    -lopencv_flann320\
-    -lopencv_highgui320\
-    -lopencv_imgcodecs320\
-    -lopencv_imgproc320\
-#    -lopencv_ml320\
-#    -lopencv_objdetect320\
-#     -lopencv_photo320\
-#    -lopencv_shape320\
-#    -lopencv_stitching320\
-#    -lopencv_superres\
-#    -lopencv_ts320\
-#      -lopencv_video320\
-#     -lopencv_videostab\
-     -lopencv_videoio320
-}
+INCLUDEPATH += $$PWD/../../../../../../../opencv/build/include
+DEPENDPATH += $$PWD/../../../../../../../opencv/build/include
 
-unix {
-    message("Using unix configuration")
-
-    INCLUDEPATH += /usr/local/include/opencv
-    LIBS += -L/usr/local/lib \
-    -lopencv_calib3d\
-    -lopencv_core\
-    -lopencv_features2d\
-    -lopencv_flann\
-    -lopencv_highgui\
-    -lopencv_imgcodecs\
-    -lopencv_imgproc\
-    -lopencv_ml\
-    -lopencv_objdetect\
-    -lopencv_photo\
-    -lopencv_shape\
-    -lopencv_stitching\
-    -lopencv_superres\
-    -lopencv_ts\
-    -lopencv_video\
-    -lopencv_videoio\
-    -lopencv_videostab
-}
+win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../../../../../../../opencv/build/x64/vc15/lib/libopencv_world410.a
+else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../../../../../../../opencv/build/x64/vc15/lib/libopencv_world410d.a
+else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../../../../../../../opencv/build/x64/vc15/lib/opencv_world410.lib
+else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../../../../../../../opencv/build/x64/vc15/lib/opencv_world410d.lib
