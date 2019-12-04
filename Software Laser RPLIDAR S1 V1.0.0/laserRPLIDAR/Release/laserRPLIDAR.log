@@ -5,7 +5,7 @@ d:\documentos\github\sastools\software laser rplidar s1 v1.0.0\sdk\include\rplid
   d:\documentos\github\sastools\software laser rplidar s1 v1.0.0\sdk\include\rplidar_cmd.h(260): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
 d:\documentos\github\sastools\software laser rplidar s1 v1.0.0\laserrplidar\main.cpp(196): warning C4018: '<': signed/unsigned mismatch
   Generating code
-  12 of 813 functions ( 1.5%) were compiled, the rest were copied from previous compilation.
+  14 of 813 functions ( 1.7%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code

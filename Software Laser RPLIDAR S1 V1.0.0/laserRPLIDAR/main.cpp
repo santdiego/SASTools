@@ -216,23 +216,14 @@ void laser_func()
 		count = _countof(nodes);
 		op_result = drv->grabScanDataHq(nodes, count, 0);
 		if (IS_OK(op_result)) {
-			//count = _countof(nodes);
 			drv->ascendScanData(nodes, count);
-			/*m_SharedData_RPLIDAR->angle_deg[(int)count] = (float)(nodes[0].angle_z_q14 * 90.f / (1 << 14));//angle_in_degrees
-			m_SharedData_RPLIDAR->distance_m[(int)count] = (float)(nodes[0].dist_mm_q2 / 1000.f / (1 << 2));//distance_in_meters
-			m_SharedData_RPLIDAR->quality[(int)count] = nodes[0].quality;
-			for (int pos = 1; pos < (int)count; ++pos) {
-				m_SharedData_RPLIDAR->angle_deg[pos-1] = (float)(nodes[pos].angle_z_q14 * 90.f / (1 << 14));//angle_in_degrees
-				m_SharedData_RPLIDAR->distance_m[pos-1] = (float)(nodes[pos].dist_mm_q2 / 1000.f / (1 << 2));//distance_in_meters
-				m_SharedData_RPLIDAR->quality[pos-1] = nodes[pos].quality;
-			}*/
 			for (int pos = 0; pos < (int)count; ++pos) {
 				m_SharedData_RPLIDAR->angle_deg[pos] = (float)(nodes[pos].angle_z_q14 * 90.f / (1 << 14));//angle_in_degrees
 				m_SharedData_RPLIDAR->distance_m[pos] = (float)(nodes[pos].dist_mm_q2 / 1000.f / (1 << 2));//distance_in_meters
 				m_SharedData_RPLIDAR->quality[pos] = nodes[pos].quality;
 			}
 			m_SharedData_RPLIDAR->count = (uint16_t)count;
-			std::cout << "count = " << (uint16_t)count << std::endl;
+			//std::cout << "count = " << (uint16_t)count << std::endl;
 		}
 		ResetEvent(EventoTimer);
 	}
