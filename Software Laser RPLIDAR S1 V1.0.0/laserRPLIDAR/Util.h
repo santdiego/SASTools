@@ -6,6 +6,7 @@
 #include <tchar.h>
 #include <chrono>
 #include <iostream>
+#include <inttypes.h>
 
 #include "rplidar.h" //RPLIDAR standard sdk, all-in-one header
 #include <signal.h>
@@ -14,10 +15,12 @@
 
 ///ESTRUCTURA QUE FORMAN LA MEMORIA VIRTUAL//////
 #define M_COMPARTIDA_RPLIDAR TEXT("RPLIDAR")
-#define DEFAULT_PORT "\\\\.\\COM3"
+#define DEFAULT_PORT "\\\\.\\COM16"
 #define DEFAULT_TIEMPO_MUESTREO 100
 #define DEFAULT_BAUDRATE 256000
-const int MAXREADINGS = 1100;
+#define DEFAULT_MODE 1   //DenseBoost
+#define DEFAULT_RPM 600
+const int MAXREADINGS = 1200;
 const int SHARED_NAME_SIZE = 256;
 
 // Global Variables:
@@ -30,6 +33,8 @@ HANDLE EventoTimer;//Evento q se señaliza cada periodo de muestreo//
 char comPort[14] = DEFAULT_PORT;
 _u32 baudrate = DEFAULT_BAUDRATE;
 _u8 ts = DEFAULT_TIEMPO_MUESTREO;
+_u16 mode = DEFAULT_MODE;
+_u16 rpm = DEFAULT_RPM;
 
 template <class StructType>
 class CSharedStruct

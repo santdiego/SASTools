@@ -4,7 +4,7 @@
 #define _countof(_Array) (int)(sizeof(_Array) / sizeof(_Array[0]))
 #endif
 
-void readFile(char *port, _u32 *baudrate, _u8 *ts) {
+void readFile(char *port, _u32 *baudrate, _u8 *ts, _u16 *mode, _u16 *rpm) {
 	char nameFile[50] = "";
 	FILE *file;
 	errno_t err;
@@ -12,7 +12,11 @@ void readFile(char *port, _u32 *baudrate, _u8 *ts) {
 	err = fopen_s(&file, nameFile, "r");
 	if (err == 0)
 	{
-		fscanf_s(file, "%s\n%u\n%u\n", port, 14, baudrate, ts);
+		fscanf_s(file, "%s", port, 14);
+		fscanf_s(file, "\n%" SCNu32, baudrate);
+		fscanf_s(file, "\n%" SCNu8, ts);
+		fscanf_s(file, "\n%" SCNu16, mode);
+		fscanf_s(file, "\n%" SCNu16, rpm);
 		fclose(file);
 	}
 }
@@ -38,7 +42,7 @@ bool checkRPLIDARHealth(RPlidarDriver * drv)
 
     op_result = drv->getHealth(healthinfo);
     if (IS_OK(op_result)) { // the macro IS_OK is the preperred way to judge whether the operation is succeed.
-        printf("RPLidar health status : %d\n", healthinfo.status);
+        printf("RPLidar health status : %d\n\n", healthinfo.status);
         if (healthinfo.status == RPLIDAR_STATUS_ERROR) {
             fprintf(stderr, "Error, rplidar internal error detected. Please reboot the device to retry.\n");
             // enable the following code if you want rplidar to be reboot by software
@@ -80,7 +84,7 @@ int main(void)
 
 	timeBeginPeriod(1); //Set Windows Timer Resolution to 1ms
 
-	readFile(comPort, &baudrate, &ts);
+	readFile(comPort, &baudrate, &ts, &mode, &rpm);
 	///////////////////////////////////////////////////////
 	// Create the timer queue.
 	TimerQueue = CreateTimerQueue();
@@ -189,16 +193,21 @@ void laser_func()
 
 	drv->getAllSupportedScanModes(scanModes);
 
-	/*for (int i = 0; i < scanModes.size(); i++)
+	for (int i = 0; i < scanModes.size(); i++)
 	{
 		std::cout << "scanModes[" << i <<"].id = " << scanModes[i].id << std::endl;
 		std::cout << "scanModes[" << i <<"].max_distance = " << scanModes[i].max_distance << std::endl;
 		std::cout << "scanModes[" << i <<"].scan_mode = " << scanModes[i].scan_mode << std::endl;
-		std::cout << "scanModes[" << i <<"].us_per_sample = " << scanModes[i].us_per_sample << std::endl;
-	}*/
+		std::cout << "scanModes[" << i <<"].us_per_sample = " << scanModes[i].us_per_sample << std::endl << std::endl;
+	}
 
 	drv->startMotor();
-	drv->startScanExpress(false, scanModes[1].id); //DenseBoost
+	drv->startScanExpress(false, scanModes[mode].id); //DenseBoost = 1
+	op_result = drv->setLidarSpinSpeed(rpm);
+	if (IS_OK(op_result))
+		std::cout << "drv->setLidarSpinSpeed OK" << std::endl << std::endl;
+	else
+		std::cout << "drv->setLidarSpinSpeed ERROR --- op_result = " << op_result << std::endl << std::endl;
 
 	// fetech result and copy to shared memory...
 	while (!stop_signal) 
@@ -208,16 +217,22 @@ void laser_func()
 		op_result = drv->grabScanDataHq(nodes, count, 0);
 		if (IS_OK(op_result)) {
 			//count = _countof(nodes);
-			//drv->ascendScanData(nodes, count);
-			m_SharedData_RPLIDAR->angle_deg[(int)count] = (float)(nodes[0].angle_z_q14 * 90.f / (1 << 14));//angle_in_degrees
+			drv->ascendScanData(nodes, count);
+			/*m_SharedData_RPLIDAR->angle_deg[(int)count] = (float)(nodes[0].angle_z_q14 * 90.f / (1 << 14));//angle_in_degrees
 			m_SharedData_RPLIDAR->distance_m[(int)count] = (float)(nodes[0].dist_mm_q2 / 1000.f / (1 << 2));//distance_in_meters
 			m_SharedData_RPLIDAR->quality[(int)count] = nodes[0].quality;
 			for (int pos = 1; pos < (int)count; ++pos) {
 				m_SharedData_RPLIDAR->angle_deg[pos-1] = (float)(nodes[pos].angle_z_q14 * 90.f / (1 << 14));//angle_in_degrees
 				m_SharedData_RPLIDAR->distance_m[pos-1] = (float)(nodes[pos].dist_mm_q2 / 1000.f / (1 << 2));//distance_in_meters
 				m_SharedData_RPLIDAR->quality[pos-1] = nodes[pos].quality;
+			}*/
+			for (int pos = 0; pos < (int)count; ++pos) {
+				m_SharedData_RPLIDAR->angle_deg[pos] = (float)(nodes[pos].angle_z_q14 * 90.f / (1 << 14));//angle_in_degrees
+				m_SharedData_RPLIDAR->distance_m[pos] = (float)(nodes[pos].dist_mm_q2 / 1000.f / (1 << 2));//distance_in_meters
+				m_SharedData_RPLIDAR->quality[pos] = nodes[pos].quality;
 			}
 			m_SharedData_RPLIDAR->count = (uint16_t)count;
+			std::cout << "count = " << (uint16_t)count << std::endl;
 		}
 		ResetEvent(EventoTimer);
 	}

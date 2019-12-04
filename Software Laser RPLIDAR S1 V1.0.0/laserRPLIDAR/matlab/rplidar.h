@@ -6,7 +6,7 @@
 
 ///ESTRUCTURA QUE FORMAN LA MEMORIA VIRTUAL//////
 #define M_COMPARTIDA_RPLIDAR TEXT("RPLIDAR")
-const int MAXREADINGS = 1100;
+const int MAXREADINGS = 1200;
 const int SHARED_NAME_SIZE = 256;
 //const int minDistance = 0;
 //const int maxDistance = 40000;

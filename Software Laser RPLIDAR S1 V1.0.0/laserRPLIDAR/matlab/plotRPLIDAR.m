@@ -34,10 +34,14 @@ distancia=zeros(3,num);
 
 %%% Plotar el barrido laser al la altura real
 for i=1:num
-    medidasxyz=[cos(deg2rad(ang(i)))* dist(i);...
-    -sin(deg2rad(ang(i)))* dist(i);...
-    0];
-    medidasxyz = Rot * medidasxyz;
-    distancia(:,i)=medidasxyz;
+    if(dist(i) < 0.01)
+        distancia(:,i)=[NaN;NaN;NaN];
+    else
+        medidasxyz=[cos(deg2rad(ang(i)))* dist(i);...
+        -sin(deg2rad(ang(i)))* dist(i);...
+        0];
+        medidasxyz = Rot * medidasxyz;
+        distancia(:,i)=medidasxyz;
+    end
 end
 Laser=[x x+distancia(1,:);y y+distancia(2,:);z z+distancia(3,:)];
