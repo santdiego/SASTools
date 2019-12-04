@@ -1,5 +1,0 @@
-https://www.mathworks.com/help/simulink/s-function-basics.html
-https://www.mathworks.com/help/simulink/sfg/how-s-functions-work.html
-https://www.mathworks.com/help/simulink/sfg/how-the-simulink-engine-interacts-with-c-s-functions.html
-https://www.mathworks.com/help/simulink/sfg/s-function-concepts.html#f6-24743
-https://www.mathworks.com/help/simulink/ug/how-propagation-affects-inherited-sample-times.html
