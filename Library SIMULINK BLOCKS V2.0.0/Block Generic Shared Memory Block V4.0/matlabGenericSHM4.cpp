@@ -46,9 +46,9 @@ enum Params{DEV_INPUT_SHM_NAME=0,DEV_OUTPUT_SHM_NAME,INPUTS,OUTPUTS,INPUT_TYPES,
 
 #include "simstruc.h"
 #ifdef _WIN32
-#include "..\..\ITools\ILib\ilib.h"
+#include "..\..\..\ITools\ILib\ilib.h"
 #else
-#include "../../ITools/ILib/modules/isharedmemory.h"
+#include "..\../../ITools/ILib/modules/isharedmemory.h"
 #endif
 #include <iostream>
 using namespace std;
