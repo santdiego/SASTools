@@ -1,0 +1,7 @@
+
+*.ipch
+Software Laser RPLIDAR S1 V1.0.0/laserRPLIDAR/.vs/laserRPLIDAR/v16/.suo
+*.db
+*.user
+Software Laser RPLIDAR S1 V1.0.0/laserRPLIDAR/Release/laserRPLIDAR.tlog/unsuccessfulbuild
+*.pdb
