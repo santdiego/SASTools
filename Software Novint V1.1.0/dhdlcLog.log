@@ -1,0 +1,10 @@
+[dhdlcImp::dhdlcImp():02.11.40.0007] - Constructor called
+[dhdlcImp::init():02.11.40.1394] - init(Default Falcon,(null))
+[dhdlcImp::init():02.11.53.2485] - dhdOpen() returned -5
+[dhdlcImp::init():02.11.54.3147] - dhdOpen() returned 0
+[dhdlcImp::init():02.12.06.2483] - dhdOpenWithReset() returned -5
+[dhdlcImp::init():02.12.19.2484] - dhdOpenWithReset() returned -5
+[dhdlcImp::init():02.12.32.2482] - dhdOpenWithReset() returned -5
+[dhdlcImp::init():02.12.45.2479] - dhdOpenWithReset() returned -5
+[dhdlcImp::init():02.12.58.2485] - dhdOpenWithReset() returned -5
+[dhdlcImp::init():02.12.58.3187] - Returning -1
